@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gasolina  Ou Etanol</title>
+</head>
+
+
+<style>
+
+#al ,#gas{
+
+    background-color: chartreuse;
+    font-size: 18px;
+    color: darkred;
+
+
+}
+
+.centro{
+    position: absolute;
+    text-align: center;
+    background-color: aqua;
+    height: 350px;
+    width: 350px;
+    left: 40%;
+    top: 200px;
+    
+}
+
+.bt{
+position:center;
+align-items: center;
+right: 40%;
+align-content: center;
+}
+
+
+
+
+
+
+h1,p{
+position:relative;
+align-content: center;
+left: 35%;
+font-family:Georgia, 'Times New Roman', Times, serif ;
+
+}
+
+
+body{
+
+
+background-color: darkgoldenrod;
+
+}
+
+
+
+</style>
+
+
+<body>
+    
+
+
+
+
+
+
+
+
+</body>
+
+<div id=" div1">
+
+    <h1>Calculadora entre Gasolina ou Etanol</h1>
+
+    <p>O cálculo do Inmetro tomado como padrão considera que, para saber se o álcool leva <br>
+    vantagem sobre a gasolina, o preço do litro do mesmo dividido pelo preço do litro da <br> 
+    gasolina deve ser igual ou inferior a 0,7 ou 70%</p>
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+<section>
+    <div class="centro">
+        Digite o Preço do Alcool<br>
+        <input type="number" id="al"  class="alcool"  value="5.59"><br>
+        Digite o Preço da Gasolina <br>
+        <input type="number" id="gas"  class="gasolina"  value="7.59"><br>
+         <br>
+        <button  class="bt" onclick="clicar()">  resultado</button> <br>
+        <div id="div" class="resultado">  </div>
+
+    </div>
+</section>
+<script>
+
+
+
+
+    
+    function clicar()
+{
+   var inp1= document.querySelector(".alcool").value;
+   var inp2= document.querySelector(".gasolina").value;
+
+    var resultado= inp1/inp2>0.7
+
+
+    if(resultado ==  true)
+
+document.write("<br>"+"<b>"+"<H1>"+" Abasteça com Gasolina" +"</H1>"+"</b>"); 
+
+{ document.body.style.backgroundColor = 'Black';
+
+document.body.style.color= "red";
+
+
+
+
+}
+  
+if (resultado== false) 
+{
+
+    
+    document.write("<br>"+"<h1>"+" Abasteça com Alcool"+"</h1>"+"<br>");
+
+    document.body.style.backgroundColor = 'Green';
+
+document.body.style.color= "red";
+
+}
+
+
+
+
+
+    document.querySelector(".resultado").innerHTML=resultado
+ 
+}    
+
+
+</script>
+
+
+
+</html>
